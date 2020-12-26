@@ -521,7 +521,21 @@ if (isset($_POST["updateCartItem"])) {
 	}
 }
 
-
+//Remove User From About Team
+// if (isset($_POST["removeUserFromAboutTeam"])) {
+// 	$remove_id = $_POST["rid"];
+// 	if (isset($_SESSION["uid"])) {
+// 		$sql = "DELETE FROM aboutteam WHERE id = '$remove_id' AND id = '$_SESSION[uid]'";
+// 	}
+// 	if(mysqli_query($con,$sql)){
+// 		echo "<div class='alert alert-danger'>
+// 		<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>;
+// 		<b>Sản phẩm đã được Xóa.
+// 		</div>";
+		
+// 		exit();
+// 	}
+// }
 
 
 ?>

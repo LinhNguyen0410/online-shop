@@ -111,7 +111,7 @@ mysqli_close($con);
                           <input type="text" name="education" id="education" class="form-control" required>
                         </div>
                       </div>
-                         <div class="col-md-4">
+                     <div class="col-md-4">
                       <div class="">
                         <label for="">Thêm Ảnh</label>
                         <input type="file" name="picture" required class="btn btn-fill btn-success" id="picture" >
