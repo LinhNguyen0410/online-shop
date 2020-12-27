@@ -1,10 +1,7 @@
 <?php
 include "db.php";
 
-include "header.php";
-
-
-                         
+include "header.php";    
 ?>
 
 <style>
@@ -28,8 +25,8 @@ include "header.php";
 }
 
 .col-75 {
-  -ms-flex: 75%; /* IE10 */
-  flex: 75%;
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
 }
 
 .col-25,
@@ -39,7 +36,7 @@ include "header.php";
 }
 
 .container-checkout {
-  background-color: #55E49C;
+  background-color: #A9D0F5;
   padding: 5px 20px 15px 20px;
   border: 1px solid lightgrey;
   border-radius: 3px;
