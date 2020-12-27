@@ -411,7 +411,7 @@ if (isset($_POST["Common"])) {
 				<div class="btn-group">
 				<a href="#" class="btn btn-info btn-sm update" update_id="'.$product_id.'"><i class="fa fa-refresh">Cập Nhật</i></a>
 
-				<a href="#" class="btn btn-danger btn-sm remove" remove_id="'.$product_id.'"><i class="fa fa-trash-o"> Xóa </i></a>	
+				<a href="#" class="btn btn-danger btn-sm remove" remove_id="'.$product_id.'"><i class="fa fa-trash-o"  onclick="alertDelete()"> Xóa </i></a>	
 				</div>							
 				</td>
 				</tr>';
@@ -520,26 +520,31 @@ if (isset($_POST["updateCartItem"])) {
 		exit();
 	}
 }
-
-//Remove User From About Team
-// if (isset($_POST["removeUserFromAboutTeam"])) {
-// 	$remove_id = $_POST["rid"];
-// 	if (isset($_SESSION["uid"])) {
-// 		$sql = "DELETE FROM aboutteam WHERE id = '$remove_id' AND id = '$_SESSION[uid]'";
-// 	}
-// 	if(mysqli_query($con,$sql)){
-// 		echo "<div class='alert alert-danger'>
-// 		<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>;
-// 		<b>Sản phẩm đã được Xóa.
-// 		</div>";
+//Remove Member From Aboutteam
+if (isset($_POST["removeItemFromCart"])) {
+	$remove_id = $_POST["rid"];
+	if (isset($_SESSION["uid"])) {
+		$sql = "DELETE FROM cart WHERE p_id = '$remove_id' AND user_id = '$_SESSION[uid]'";
+	}else{
+		$sql = "DELETE FROM cart WHERE p_id = '$remove_id' AND ip_add = '$ip_add'";
+	}
+	if(mysqli_query($con,$sql)){
+		echo "<div class='alert alert-danger'>
+		<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>;
+		<b>Sản phẩm đã được Xóa.
+		</div>";
 		
-// 		exit();
-// 	}
-// }
-
+		exit();
+		}
+	}
 
 ?>
-
+  <script>
+          function alertDelete(){
+            alert("Xóa sản phẩm thành công");
+            return true;
+          }
+        </script>
 
 
 

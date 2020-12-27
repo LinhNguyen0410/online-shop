@@ -37,7 +37,7 @@
 .content{
   background:url(img/bg2.jpg)no-repeat;
 }
-
+    ``
 </style>
 <?php
 session_start();
@@ -102,20 +102,21 @@ include "homeaction.php";
                <i class='material-icons'>Cập Nhật</i>
 
                <div class='ripple-container'></div></a>
-
-               <a href='manageuser.php?id=$id&action=delete' type='button' rel='tooltip' title='' class='btn btn-danger btn-sm remove' data-original-title='Delete User'>
+               <a href='delete_members.php?id=$id.'type='button' rel='tooltip' title='' class='btn btn-danger btn-sm remove' data-original-title='Delete User' name='btn_delete' id ='btn.delete'onclick='alertDelete()'>
                <i class='material-icons'>Xóa</i>
 
                <div class='ripple-container'></div></a>
                </td></tr>";
+            
              }
-             
+           
              mysqli_close($con); 
+           
              ?>
            </tbody>
          </table>
          <div class="changeInfo">
-          <a href="add_members.php" target=blank class="btn btn-success">Thêm thành viên</a>
+          <a href="add_members.php" class="btn btn-success">Thêm thành viên</a>
                   <!-- <a href="add_members.php" target=blank class="btn btn-danger">Xóa thành viên</a>
                     <a href="add_members.php" target=blank class="btn btn-info">Thay đổi thông tin</a> -->
                   </div>
@@ -128,4 +129,12 @@ include "homeaction.php";
         </div>
         <?php
         include "footer.php";
+      
         ?>
+        <!-- function hỏi có muốn xóa thành viên hay ko -->
+        <script>
+          function alertDelete(){
+             alert("Thành viên <?php echo'$fullname' ?> này đã bị xóa!");
+            return true;
+          }
+        </script>

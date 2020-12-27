@@ -7,7 +7,18 @@
       margin-top: 20px;
     font-size: 30px;
    font-family: "Yellowtail", cursive;
+   color: orange
    }
+   label{
+    color: orange
+   
+   }
+
+     .content{
+      background: url(img/bgedit.jpg)no-repeat;
+    background-size: cover;
+   
+  }
 
  </style>
 
@@ -39,13 +50,23 @@ $picture_size=$_FILES['picture']['size'];
 if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="image/png" || $picture_type=="image/gif")
 {
   if($picture_size<=50000000)
-  
-    $imageM=time()."_".$picture_name;
+    // sinh ra 1 ảnh mới
+    // $imageM=time()."_".$picture_name;
+    $imageM=$picture_name;
     move_uploaded_file($picture_tmp_name,"img/".$imageM);
     }
 
 mysqli_query($con,"update aboutteam set fullname='$fullname', idcard='$idcard', phone='$phone', 
   position='$position',Education='$edu',imageM='$imageM' where id='$id'")or die("Query 2 is inncorrect..........");
+// Xuất thông báo cập nhật thành công
+        echo "
+        <div class='alert alert-success'>
+        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+        <b>Đã cập nhật thông tin thành viên thành công. Vào <a href='members.php'><b>đây</b></a> để xem chi tiết..!</b>
+        </div>";
+// Xuất thông báo cập nhật thành công
+    
+
 
 // header("location: manageuser.php");
 mysqli_close($con);

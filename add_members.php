@@ -41,8 +41,9 @@ $picture_size=$_FILES['picture']['size'];
 if($picture_type=="image/jpeg" || $picture_type=="image/jpg" || $picture_type=="image/png" || $picture_type=="image/gif")
 {
   if($picture_size<=50000000)
-  
-    $imageM=time()."_".$picture_name;
+  // sinh ra 1 ảnh mới
+  // $imageM=time()."_".$picture_name;
+   $imageM=$picture_name;
     move_uploaded_file($picture_tmp_name,"img/".$imageM);
 
 
