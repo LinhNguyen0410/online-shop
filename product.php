@@ -133,7 +133,7 @@ include "header.php";
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
 									<i class="fa fa-star"></i>
-									<i class="fa fa-star-o"></i>
+									<i class="fa fa-star"></i>
 								</div>
 								<a class="review-link" href="#review-form">10 đánh giá(s) | Thêm đánh giá</a>
 							</div>

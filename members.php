@@ -71,8 +71,8 @@ include "homeaction.php";
                 <th class= "title_info">Mã Số Sinh Viên</th>
                 <th class= "title_info">Số Điện Thoại</th>
                 <th class= "title_info">Học Vấn</th>
-                <th class= "title_info">Vai Trò</th>                      
-                <!-- <th class= "title_info">Thay đổi</th>                       -->
+                <th class= "title_info">Vai Trò</th>  
+
               </tr>
             </thead>
             <tbody>
@@ -81,24 +81,24 @@ include "homeaction.php";
               while(list($id,$fullname,$idcard,$phone,$position,$education,$imageM)= mysqli_fetch_array($result))
               {
                echo 
-               '
+               "
                <tr>
-               <td data-th="Product" >
-               <div class="row">
+               <td data-th='Product' >
+               <div class='row'>
                
-               <div class="col-sm-4 ">
-               <a href="#">
-               <img src="img/'.$imageM.'" style="height: 100px;width:120px;"/>
+               <div class='col-sm-4 ''>
+               <a href='members_details.php?id=$id' type='button'rel='tooltip'>
+               <img src='img/".$imageM."' style='height: 100px;width:120px;'/>
                </a>
                </div>
-               <td>'.$fullname.'</td>
-               <td>'.$idcard.'</td>
-               <td>'.$phone.'</td>
-               <td>'.$education.'</td>
-               <td>'.$position.'</td> ';
+               <td>".$fullname."</td>
+               <td>".$idcard."</td>
+               <td>".$phone."</td>
+               <td>".$education."</td>
+               <td>".$position."</td> ";
 
                echo"<td>
-               <a href='edit_members.php?id=$id' type='button' rel='tooltip' title='' class='btn btn-info btn-sm update' data-original-title='Edit User'>
+               <a href='edit_members.php?id=$id' type='button' rel='tooltip' title='' class='btn btn-info btn-sm update' data-original-title='Edit User' id='btn_update'>
                <i class='material-icons'>Cập Nhật</i>
 
                <div class='ripple-container'></div></a>
@@ -134,7 +134,7 @@ include "homeaction.php";
         <!-- function hỏi có muốn xóa thành viên hay ko -->
         <script>
           function alertDelete(){
-             alert("Thành viên <?php echo'$fullname' ?> này đã bị xóa!");
+             alert("Thành viên này đã bị xóa!");
             return true;
           }
         </script>

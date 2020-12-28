@@ -15,7 +15,7 @@
 	/* background-color: yellow; */
 	width:280px;
 	height:70px;
-   top: 75%;
+   top: 85%;
 	left: 50%;
 
 	
@@ -27,7 +27,8 @@
 	margin-top:10px;
 	background-color: #f28b37;
 	font-size:14px;
-	margin:3px 5px 3px 5px;
+/*	margin:7px 12px 12px 8px;*/
+	padding: 8px
 }
 li.menu_about:hover .sub_menu_about
 	{
@@ -77,9 +78,6 @@ if(isset($_POST["categoryhome"])){
 		<ul class = 'sub_menu_about'>
 			<li>
 			<a href='members.php'>Nhóm 02 - 18BITV02</a>
-			</li>
-			<li>
-			<a href='#'>Thông Tin Market</a>
 			</li>
 		</ul>
 		</li>";
