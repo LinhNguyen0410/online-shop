@@ -48,7 +48,7 @@ session_start();
 				background: -webkit-linear-gradient(to right, #F9D423, #F3F781);  /* Chrome 10-25, Safari 5.1-6 */
 				background: linear-gradient(to right, #F9D423, #F3F781); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 			}
-	
+			
 			.main-nav li a:hover
 			{
 				color: #0431B4;

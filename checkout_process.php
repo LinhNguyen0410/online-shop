@@ -1,3 +1,4 @@
+<title>Giỏ Hàng </title>
 <?php
 session_start();
 include "db.php";
@@ -81,7 +82,7 @@ if (isset($_SESSION["uid"])) {
 }else{
     echo"<script>window.location.href='index.php'</script>";
 }
-    
+
 
 
 
