@@ -198,8 +198,8 @@ include "header.php";
 				
 				echo'	
 				<input type="hidden" name="total_count" value="'.$total_count.'">
-				<input type="hidden" name="total_price" value="'.$total.'"> 				
-				<input type="submit" id="submit" value="Tiến hành thanh toán" class="checkout-btn">
+				<input type="hidden" name="total_price" value="'.$total.'"> 
+				<input type="submit" id="submit" value="Tiến hành thanh toán" class="checkout-btn"> 
 				</form>
 				</div>
 				</div>

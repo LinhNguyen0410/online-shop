@@ -61,7 +61,8 @@ if (isset($_SESSION["uid"])) {
             if(mysqli_query($con,$sql1)){
                 $del_sql="DELETE from cart where user_id=$user_id";
                 if(mysqli_query($con,$del_sql)){
-                    echo"<script>window.location.href='store.php'</script>";
+                    echo"<script>window.location.href='payment_success.php'</script>";
+                    // sau khi thanh toán sẽ chuyển sang trang báo thanh toán thành công
                 }else{
                     echo(mysqli_error($con));
                 }
