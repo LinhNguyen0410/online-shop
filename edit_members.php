@@ -7,15 +7,15 @@
     margin-top: 20px;
     font-size: 30px;
     font-family: "Yellowtail", cursive;
-    color: orange
+    color: #000
   }
   label{
-    color: orange
+    color: blue
     
   }
 
   .content{
-    background: url(img/bgedit.jpg)no-repeat;
+    background: url(img/bgde.jpg)no-repeat;
     background-size: cover;
     
   }
@@ -39,6 +39,7 @@ if(isset($_POST['btn_save']))
   $phone=$_POST['phone'];
   $position=$_POST['position'];
   $edu=$_POST['Education'];
+  $description=$_POST['description'];
 
 
 //tải ảnh lên
@@ -57,7 +58,7 @@ if(isset($_POST['btn_save']))
   }
 
   mysqli_query($con,"update aboutteam set fullname='$fullname', idcard='$idcard', phone='$phone', 
-    position='$position',Education='$edu',imageM='$imageM' where id='$id'")or die("Query 2 is inncorrect..........");
+    position='$position',Education='$edu',description='$description',imageM='$imageM' where id='$id'")or die("Query 2 is inncorrect..........");
 // Xuất thông báo cập nhật thành công
   echo "
   <div class='alert alert-success'>
@@ -109,8 +110,15 @@ if(isset($_POST['btn_save']))
             </div>
             <div class="col-md-12 ">
               <div class="form-group">
-                <label for="exampleInputphone1">Trình Độ Học Vấn</label>
+                <label for="Education">Trình Độ Học Vấn</label>
                 <input type="text"  name="Education" id="Education" class="form-control" value="<?php echo $edu; ?>">
+              </div>
+            </div>
+
+             <div class="col-md-12 ">
+              <div class="form-group">
+                <label for="hobbies">Sở Thích</label>
+                <input type="text"  name="description" id="description" class="form-control" value="">
               </div>
             </div>
             <!-- SHOW ẢNH RA Ở VIEW EDIT -->

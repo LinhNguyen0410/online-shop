@@ -31,6 +31,9 @@ if(isset($_POST['btn_save']))
   $position=$_POST['position'];
   $phone=$_POST['phone'];
   $education=$_POST['education'];
+  $description=$_POST['description'];
+
+  // description
 
 //tải ảnh lên
   $picture_name=$_FILES['picture']['name'];
@@ -47,7 +50,7 @@ if(isset($_POST['btn_save']))
    move_uploaded_file($picture_tmp_name,"img/".$imageM);
 
 
-   mysqli_query($con,"insert into aboutteam(fullname, idcard,phone,position,education,imageM) values ('$fullname','$idcard','$phone','$position','$education','$imageM')") 
+   mysqli_query($con,"insert into aboutteam(fullname, idcard,phone,position,education,description,imageM) values ('$fullname','$idcard','$phone','$position','$education','$description','$imageM')") 
    or die ("Query 1 is inncorrect........");
    if(mysqli_query($con,$sql)){
     echo "
@@ -112,18 +115,24 @@ mysqli_close($con);
                   <input type="text" name="education" id="education" class="form-control" required>
                 </div>
               </div>
-              <div class="col-md-4">
+
+          <div class="col-md-2">
+                <div class="form-group bmd-form-group">
+                  <label class="bmd-label-floating">Sở Thích</label>
+                  <input type="text" name="description" id="description" class="form-control"  required> 
+             </div>
+              </div>
+
+              <div class="col-md-9">
                 <div class="">
                   <label for="">Thêm Ảnh</label>
                   <input type="file" name="picture" required class="btn btn-fill btn-success" id="picture" >
                 </div>
               </div>
-              
             </div>
             <a href="members.php">
-             <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull">Hoàn Thành</button>
+             <button type="submit" name="btn_save" id="btn_save" class="btn btn-primary pull" style="margin-top: 15px">Hoàn Thành</button>
            </a>
-           <div class="clearfix"></div>
          </form>
        </div>
      </div>
