@@ -1,8 +1,8 @@
 <?php
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
+if(!isset($_SESSION)) 
+{ 
+	session_start(); 
+} 
 ?>
 <style>
 	li.menu_about{
@@ -10,27 +10,27 @@
 	}
 	
 	.sub_menu_about{
-	display:none;
-	position: absolute;
-	/* background-color: yellow; */
-	width:280px;
-	height:70px;
-   top: 85%;
-	left: 50%;
+		display:none;
+		position: absolute;
+		/* background-color: yellow; */
+		width:280px;
+		height:70px;
+		top: 85%;
+		left: 50%;
 
-	
-}
-.sub_menu_about a{
-	border-bottom:2px solid #000;
-	border:1px solid #000;
-	border-radius:5px;
-	margin-top:10px;
-	background-color: #f28b37;
-	font-size:14px;
-/*	margin:7px 12px 12px 8px;*/
-	padding: 8px
-}
-li.menu_about:hover .sub_menu_about
+		
+	}
+	.sub_menu_about a{
+		border-bottom:2px solid #000;
+		border:1px solid #000;
+		border-radius:5px;
+		margin-top:10px;
+		background-color: #f28b37;
+		font-size:14px;
+		/*	margin:7px 12px 12px 8px;*/
+		padding: 8px
+	}
+	li.menu_about:hover .sub_menu_about
 	{
 		display:block;
 		z-index:11111;
@@ -76,9 +76,9 @@ if(isset($_POST["categoryhome"])){
 		<li class='menu_about'>
 		<a href='#'>Liên Hệ</a>
 		<ul class = 'sub_menu_about'>
-			<li>
-			<a href='members.php'>Nhóm 02 - 18BITV02</a>
-			</li>
+		<li>
+		<a href='members.php'>Nhóm 02 - 18BITV02</a>
+		</li>
 		</ul>
 		</li>";
 

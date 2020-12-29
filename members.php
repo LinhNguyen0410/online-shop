@@ -37,8 +37,9 @@
 .content{
   background:url(img/bg2.jpg)no-repeat;
 }
-    ``
+``
 </style>
+<title>Đội Ngũ</title>
 <?php
 session_start();
 include("db.php");
@@ -102,16 +103,16 @@ include "homeaction.php";
                <i class='material-icons'>Cập Nhật</i>
 
                <div class='ripple-container'></div></a>
-               <a href='delete_members.php?id=$id.'type='button' rel='tooltip' title='' class='btn btn-danger btn-sm remove' data-original-title='Delete User' name='btn_delete' id ='btn.delete'onclick='alertDelete()'>
+               <a href='delete_members.php?id=$id.'type='button' rel='tooltip' title='' class='btn btn-danger btn-sm remove' data-original-title='Delete User' name='btn_delete' id ='btn.delete'>
                <i class='material-icons'>Xóa</i>
 
                <div class='ripple-container'></div></a>
                </td></tr>";
-            
+               
              }
-           
+             
              mysqli_close($con); 
-           
+             
              ?>
            </tbody>
          </table>
@@ -129,12 +130,6 @@ include "homeaction.php";
         </div>
         <?php
         include "footer.php";
-      
+        
         ?>
-        <!-- function hỏi có muốn xóa thành viên hay ko -->
-        <script>
-          function alertDelete(){
-             alert("Thành viên này đã bị xóa!");
-            return true;
-          }
-        </script>
+

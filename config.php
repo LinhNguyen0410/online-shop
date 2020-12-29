@@ -1,4 +1,4 @@
-
+  
 <?php
 session_start();
 
@@ -9,12 +9,12 @@ $errors = array();
 
 // connect to the database
 define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', '');
-   define('DB_DATABASE', 'shop_online');
-   $db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
+define('DB_DATABASE', 'shop_online');
+$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
 if (!$db) {
-    die("Connection failed: " . mysqli_connect_error());
+  die("Connection failed: " . mysqli_connect_error());
 }
 
 // REGISTER USER
@@ -31,7 +31,7 @@ if (isset($_POST['reg_user'])) {
   if (empty($email)) { array_push($errors, "Email is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if ($password_1 != $password_2) {
-  array_push($errors, "The two passwords do not match");
+    array_push($errors, "The two passwords do not match");
   }
 
   // first check the database to make sure 
@@ -55,7 +55,7 @@ if (isset($_POST['reg_user'])) {
     $password = md5($password_1);//encrypt the password before saving in the database
 
     $query = "INSERT INTO register (Name, email, password) 
-          VALUES('$username', '$email', '$password')";
+    VALUES('$username', '$email', '$password')";
     mysqli_query($db, $query);
     $_SESSION['Name'] = $username;
     $_SESSION['success'] = "You are now logged in";

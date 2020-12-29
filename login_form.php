@@ -13,90 +13,88 @@ if (isset($_POST["login_user_with_product"])) {
 
 }
 ?>
+<div class="wait overlay">
+	<div class="loader"></div>
+</div>
+<style>
+	.input-borders{
+		border-radius:30px;
+	}
+	.primary-btn{
+		/* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
+		background: linear-gradient(to right, red 50%,#FF8787 50%);
+		background-size: 200% 100%;
+		background-position: right bottom;
+		transition: all .5s ease-out;
+		box-shadow: 4px 4px red;
+		color: #fff
+	}
+	.primary-btn:hover, .primary-btn:focus {
+		opacity: 0.9;
+		background-position: left bottom;
+		cursor: pointer;
+		border: 1px solid red;
+	}
+</style>
+<div class="container-fluid">
+	<!-- row -->
+	
 
-
-	<div class="wait overlay">
-		<div class="loader"></div>
-	</div>
-	    <style>
-		    .input-borders{
-		        border-radius:30px;
-		    }
-		    .primary-btn{
-		         /* hieu ung button dich chuyen mau dam nhat tu trai sang phai */
-		        background: linear-gradient(to right, red 50%,#FF8787 50%);
-		        background-size: 200% 100%;
-		        background-position: right bottom;
-		        transition: all .5s ease-out;
-		        box-shadow: 4px 4px red;
-		        color: #fff
-		    }
-		    .primary-btn:hover, .primary-btn:focus {
-		          opacity: 0.9;
-		         background-position: left bottom;
-		        cursor: pointer;
-		        border: 1px solid red;
-		}
-    </style>
-	<div class="container-fluid">
-				<!-- row -->
+	<div class="login-marg">
+		<!-- Billing Details -->
+		
+		
+		<!-- /Billing Details -->
+		
+		
+		<form onsubmit="return false" id="login" class="login100-form ">
+			<div class="billing-details jumbotron">
+				<div class="section-title">
+					<h2 class="login100-form-title p-b-49">ĐĂNG NHẬP</h2>
+				</div>
 				
-
-					<div class="login-marg">
-						<!-- Billing Details -->
-						
-						
-						<!-- /Billing Details -->
-						
-						
-								<form onsubmit="return false" id="login" class="login100-form ">
-									<div class="billing-details jumbotron">
-                                    <div class="section-title">
-                                        <h2 class="login100-form-title p-b-49">ĐĂNG NHẬP</h2>
-                                    </div>
-                                   
-                                    
-                                    <div class="form-group">
-                                       <label for="email">Email</label>
-                                        <input class="input input-borders" type="email" name="email" placeholder="Email" id="password" required>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                       <label for="email">Mật Khẩu</label>
-                                        <input class="input input-borders" type="password" name="password" placeholder="Mật Khẩu..." id="password" required>
-                                    </div>
-                                    
-                                    <div class="text-pad" >
-                                       <a href="#">
-                                           Quên Mật Khẩu ?
-                                       </a>
-                                        
-                                    </div>
-                                    
-                                    <input class="primary-btn btn-block"   type="submit"  Value="Đăng Nhập">
-                                        
-                                        <div class="panel-footer"><div class="alert alert-danger"><h4 id="e_msg"></h4></div></div>
-                                    
-                                    	
-                                        
-                                    
-
-                                </div>
-                                
-								</form>
-                           
-						<!-- Shiping Details -->
-						
-						<!-- /Shiping Details -->
-
-						<!-- Order notes -->
-						
-						<!-- /Order notes -->
-					</div>
-
-					<!-- Order Details -->
+				
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input class="input input-borders" type="email" name="email" id="email" placeholder="Email" id="password" required>
+				</div>
+				
+				<div class="form-group">
+					<label for="email">Mật Khẩu</label>
+					<input class="input input-borders" type="password" name="password" placeholder="Mật Khẩu..." id="password" required>
+				</div>
+				
+				<div class="text-pad" >
+					<a href="#">
+						Quên Mật Khẩu ?
+					</a>
 					
-					<!-- /Order Details -->
+				</div>
 				
-				<!-- /row -->
+				<input class="primary-btn btn-block"   type="submit"  Value="Đăng Nhập">
+				
+				<div class="panel-footer"><div class="alert alert-danger"><h4 id="e_msg"></h4></div></div>
+				
+				
+				
+				
+
 			</div>
+			
+		</form>
+		
+		<!-- Shiping Details -->
+		
+		<!-- /Shiping Details -->
+
+		<!-- Order notes -->
+		
+		<!-- /Order notes -->
+	</div>
+
+	<!-- Order Details -->
+	
+	<!-- /Order Details -->
+	
+	<!-- /row -->
+</div>

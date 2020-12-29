@@ -393,7 +393,7 @@ if (isset($_POST["Common"])) {
 				</div>
 				<div class="col-sm-6">
 				<div style="max-width=50px;">
-				<p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus, quaeratdạkđ. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, iure. </p>			
+				<p> Chúng tôi bảo đảm các sản phẩm được sản xuất trên dây chuyền công nghệ tiên tiến nhất và đều được kiểm tra thực nghiệm trước khi xuất xưởng để tránh các sự cố đáng tiếc có thể xảy ra, nhằm mang đến cho Quý khách hàng sản phẩm chất lượng tốt nhất và đáng tin cậy nhất </p>			
 				</div>
 				</div>
 
@@ -535,16 +535,16 @@ if (isset($_POST["removeItemFromCart"])) {
 		</div>";
 		
 		exit();
-		}
 	}
+}
 
 ?>
-  <script>
-          function alertDelete(){
-            alert("Xóa sản phẩm thành công");
-            return true;
-          }
-        </script>
+<script>
+	function alertDelete(){
+		alert("Xóa sản phẩm thành công");
+		return true;
+	}
+</script>
 
 
 

@@ -1,3 +1,4 @@
+<title>Giỏ Hàng </title>
 <?php
 include "header.php";
 ?>
