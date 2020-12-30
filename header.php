@@ -204,10 +204,10 @@ session_start();
 						<div class="header-search">
 							<form>
 								<select class="input-select">
-									<option value="0">Thể Loại</option>
-									<option value="1">Quần Áo</option>
-									<option value="1">Đồ Điện Tử</option>
-									<option value="1">Laptop</option>
+									<option value="0">Tất Cả</option>
+									<option value="1">Qúy Ông</option>
+									<option value="2">Qúy Bà</option>
+									<option value="3">Nội Thất</option>
 								</select>
 								<input class="input" id="search" type="text" placeholder="Nhập từ khóa..">
 								<button type="submit" id="search_btn" class="search-btn">Tìm</button>
